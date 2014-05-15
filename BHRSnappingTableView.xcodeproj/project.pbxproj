@@ -1,0 +1,474 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5FB886DC1924D319007F6F31 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB886DB1924D319007F6F31 /* Foundation.framework */; };
+		5FB886DE1924D319007F6F31 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB886DD1924D319007F6F31 /* CoreGraphics.framework */; };
+		5FB886E01924D319007F6F31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB886DF1924D319007F6F31 /* UIKit.framework */; };
+		5FB886E61924D319007F6F31 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FB886E41924D319007F6F31 /* InfoPlist.strings */; };
+		5FB886E81924D319007F6F31 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB886E71924D319007F6F31 /* main.m */; };
+		5FB886EC1924D319007F6F31 /* BHRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB886EB1924D319007F6F31 /* BHRAppDelegate.m */; };
+		5FB886EF1924D319007F6F31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FB886ED1924D319007F6F31 /* Main.storyboard */; };
+		5FB886F21924D319007F6F31 /* BHRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB886F11924D319007F6F31 /* BHRViewController.m */; };
+		5FB886F41924D319007F6F31 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FB886F31924D319007F6F31 /* Images.xcassets */; };
+		5FB886FB1924D319007F6F31 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB886FA1924D319007F6F31 /* XCTest.framework */; };
+		5FB886FC1924D319007F6F31 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB886DB1924D319007F6F31 /* Foundation.framework */; };
+		5FB886FD1924D319007F6F31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB886DF1924D319007F6F31 /* UIKit.framework */; };
+		5FB887051924D319007F6F31 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FB887031924D319007F6F31 /* InfoPlist.strings */; };
+		5FB887071924D319007F6F31 /* BHRSnappingTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB887061924D319007F6F31 /* BHRSnappingTableViewTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5FB886FE1924D319007F6F31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5FB886D01924D319007F6F31 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5FB886D71924D319007F6F31;
+			remoteInfo = BHRSnappingTableView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5FB886D81924D319007F6F31 /* BHRSnappingTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BHRSnappingTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FB886DB1924D319007F6F31 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5FB886DD1924D319007F6F31 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5FB886DF1924D319007F6F31 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5FB886E31924D319007F6F31 /* BHRSnappingTableView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BHRSnappingTableView-Info.plist"; sourceTree = "<group>"; };
+		5FB886E51924D319007F6F31 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5FB886E71924D319007F6F31 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5FB886E91924D319007F6F31 /* BHRSnappingTableView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BHRSnappingTableView-Prefix.pch"; sourceTree = "<group>"; };
+		5FB886EA1924D319007F6F31 /* BHRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BHRAppDelegate.h; sourceTree = "<group>"; };
+		5FB886EB1924D319007F6F31 /* BHRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHRAppDelegate.m; sourceTree = "<group>"; };
+		5FB886EE1924D319007F6F31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5FB886F01924D319007F6F31 /* BHRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BHRViewController.h; sourceTree = "<group>"; };
+		5FB886F11924D319007F6F31 /* BHRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHRViewController.m; sourceTree = "<group>"; };
+		5FB886F31924D319007F6F31 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5FB886F91924D319007F6F31 /* BHRSnappingTableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BHRSnappingTableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FB886FA1924D319007F6F31 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5FB887021924D319007F6F31 /* BHRSnappingTableViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BHRSnappingTableViewTests-Info.plist"; sourceTree = "<group>"; };
+		5FB887041924D319007F6F31 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5FB887061924D319007F6F31 /* BHRSnappingTableViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHRSnappingTableViewTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5FB886D51924D319007F6F31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FB886DE1924D319007F6F31 /* CoreGraphics.framework in Frameworks */,
+				5FB886E01924D319007F6F31 /* UIKit.framework in Frameworks */,
+				5FB886DC1924D319007F6F31 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FB886F61924D319007F6F31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FB886FB1924D319007F6F31 /* XCTest.framework in Frameworks */,
+				5FB886FD1924D319007F6F31 /* UIKit.framework in Frameworks */,
+				5FB886FC1924D319007F6F31 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5FB886CF1924D319007F6F31 = {
+			isa = PBXGroup;
+			children = (
+				5FB886E11924D319007F6F31 /* BHRSnappingTableView */,
+				5FB887001924D319007F6F31 /* BHRSnappingTableViewTests */,
+				5FB886DA1924D319007F6F31 /* Frameworks */,
+				5FB886D91924D319007F6F31 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5FB886D91924D319007F6F31 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5FB886D81924D319007F6F31 /* BHRSnappingTableView.app */,
+				5FB886F91924D319007F6F31 /* BHRSnappingTableViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5FB886DA1924D319007F6F31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5FB886DB1924D319007F6F31 /* Foundation.framework */,
+				5FB886DD1924D319007F6F31 /* CoreGraphics.framework */,
+				5FB886DF1924D319007F6F31 /* UIKit.framework */,
+				5FB886FA1924D319007F6F31 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5FB886E11924D319007F6F31 /* BHRSnappingTableView */ = {
+			isa = PBXGroup;
+			children = (
+				5FB886EA1924D319007F6F31 /* BHRAppDelegate.h */,
+				5FB886EB1924D319007F6F31 /* BHRAppDelegate.m */,
+				5FB886ED1924D319007F6F31 /* Main.storyboard */,
+				5FB886F01924D319007F6F31 /* BHRViewController.h */,
+				5FB886F11924D319007F6F31 /* BHRViewController.m */,
+				5FB886F31924D319007F6F31 /* Images.xcassets */,
+				5FB886E21924D319007F6F31 /* Supporting Files */,
+			);
+			path = BHRSnappingTableView;
+			sourceTree = "<group>";
+		};
+		5FB886E21924D319007F6F31 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5FB886E31924D319007F6F31 /* BHRSnappingTableView-Info.plist */,
+				5FB886E41924D319007F6F31 /* InfoPlist.strings */,
+				5FB886E71924D319007F6F31 /* main.m */,
+				5FB886E91924D319007F6F31 /* BHRSnappingTableView-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5FB887001924D319007F6F31 /* BHRSnappingTableViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				5FB887061924D319007F6F31 /* BHRSnappingTableViewTests.m */,
+				5FB887011924D319007F6F31 /* Supporting Files */,
+			);
+			path = BHRSnappingTableViewTests;
+			sourceTree = "<group>";
+		};
+		5FB887011924D319007F6F31 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5FB887021924D319007F6F31 /* BHRSnappingTableViewTests-Info.plist */,
+				5FB887031924D319007F6F31 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5FB886D71924D319007F6F31 /* BHRSnappingTableView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FB8870A1924D319007F6F31 /* Build configuration list for PBXNativeTarget "BHRSnappingTableView" */;
+			buildPhases = (
+				5FB886D41924D319007F6F31 /* Sources */,
+				5FB886D51924D319007F6F31 /* Frameworks */,
+				5FB886D61924D319007F6F31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BHRSnappingTableView;
+			productName = BHRSnappingTableView;
+			productReference = 5FB886D81924D319007F6F31 /* BHRSnappingTableView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5FB886F81924D319007F6F31 /* BHRSnappingTableViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FB8870D1924D319007F6F31 /* Build configuration list for PBXNativeTarget "BHRSnappingTableViewTests" */;
+			buildPhases = (
+				5FB886F51924D319007F6F31 /* Sources */,
+				5FB886F61924D319007F6F31 /* Frameworks */,
+				5FB886F71924D319007F6F31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5FB886FF1924D319007F6F31 /* PBXTargetDependency */,
+			);
+			name = BHRSnappingTableViewTests;
+			productName = BHRSnappingTableViewTests;
+			productReference = 5FB886F91924D319007F6F31 /* BHRSnappingTableViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5FB886D01924D319007F6F31 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BHR;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = HIRMER.me;
+				TargetAttributes = {
+					5FB886F81924D319007F6F31 = {
+						TestTargetID = 5FB886D71924D319007F6F31;
+					};
+				};
+			};
+			buildConfigurationList = 5FB886D31924D319007F6F31 /* Build configuration list for PBXProject "BHRSnappingTableView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5FB886CF1924D319007F6F31;
+			productRefGroup = 5FB886D91924D319007F6F31 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5FB886D71924D319007F6F31 /* BHRSnappingTableView */,
+				5FB886F81924D319007F6F31 /* BHRSnappingTableViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5FB886D61924D319007F6F31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FB886F41924D319007F6F31 /* Images.xcassets in Resources */,
+				5FB886E61924D319007F6F31 /* InfoPlist.strings in Resources */,
+				5FB886EF1924D319007F6F31 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FB886F71924D319007F6F31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FB887051924D319007F6F31 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5FB886D41924D319007F6F31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FB886F21924D319007F6F31 /* BHRViewController.m in Sources */,
+				5FB886E81924D319007F6F31 /* main.m in Sources */,
+				5FB886EC1924D319007F6F31 /* BHRAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FB886F51924D319007F6F31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FB887071924D319007F6F31 /* BHRSnappingTableViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5FB886FF1924D319007F6F31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5FB886D71924D319007F6F31 /* BHRSnappingTableView */;
+			targetProxy = 5FB886FE1924D319007F6F31 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5FB886E41924D319007F6F31 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FB886E51924D319007F6F31 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5FB886ED1924D319007F6F31 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FB886EE1924D319007F6F31 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5FB887031924D319007F6F31 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FB887041924D319007F6F31 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5FB887081924D319007F6F31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		5FB887091924D319007F6F31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5FB8870B1924D319007F6F31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BHRSnappingTableView/BHRSnappingTableView-Prefix.pch";
+				INFOPLIST_FILE = "BHRSnappingTableView/BHRSnappingTableView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5FB8870C1924D319007F6F31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BHRSnappingTableView/BHRSnappingTableView-Prefix.pch";
+				INFOPLIST_FILE = "BHRSnappingTableView/BHRSnappingTableView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5FB8870E1924D319007F6F31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BHRSnappingTableView.app/BHRSnappingTableView";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BHRSnappingTableView/BHRSnappingTableView-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BHRSnappingTableViewTests/BHRSnappingTableViewTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		5FB8870F1924D319007F6F31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BHRSnappingTableView.app/BHRSnappingTableView";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BHRSnappingTableView/BHRSnappingTableView-Prefix.pch";
+				INFOPLIST_FILE = "BHRSnappingTableViewTests/BHRSnappingTableViewTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5FB886D31924D319007F6F31 /* Build configuration list for PBXProject "BHRSnappingTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FB887081924D319007F6F31 /* Debug */,
+				5FB887091924D319007F6F31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FB8870A1924D319007F6F31 /* Build configuration list for PBXNativeTarget "BHRSnappingTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FB8870B1924D319007F6F31 /* Debug */,
+				5FB8870C1924D319007F6F31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5FB8870D1924D319007F6F31 /* Build configuration list for PBXNativeTarget "BHRSnappingTableViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FB8870E1924D319007F6F31 /* Debug */,
+				5FB8870F1924D319007F6F31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5FB886D01924D319007F6F31 /* Project object */;
+}
