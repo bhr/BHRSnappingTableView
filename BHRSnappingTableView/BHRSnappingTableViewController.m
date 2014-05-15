@@ -13,8 +13,7 @@
 
 @property (nonatomic, strong) BHRSnappingTableView *tableView;
 
-@property (nonatomic, assign) CGPoint previousContentOffset;
-@property (nonatomic, assign) CGPoint lastScrollContentOffset;
+@property (nonatomic, assign) CGPoint previousTargetContentOffset;
 
 @end
 
@@ -26,63 +25,57 @@
 {
 	[super viewDidLayoutSubviews];
 
-	[self.tableView setContentOffset:CGPointMake(0.0f,
-												 CGRectGetHeight(self.tableView.tableHeaderView.bounds))];
+	CGPoint defaultContentOffset = CGPointMake(0.0f,
+											   CGRectGetHeight(self.tableView.tableHeaderView.bounds));
+	self.previousTargetContentOffset = defaultContentOffset;
+	[self.tableView setContentOffset:defaultContentOffset];
 }
 
 #pragma mark - UIScrollViewDelegate
-
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
-{
-	self.previousContentOffset = scrollView.contentOffset;
-	NSLog(@"scrollViewWillBeginDragging %f", scrollView.contentOffset.y);
-}
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-//	NSLog(@"scrollViewDidScroll %f", scrollView.contentOffset.y);
-}
 
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView
 					 withVelocity:(CGPoint)velocity
 			  targetContentOffset:(inout CGPoint *)targetContentOffset
 {
-	NSLog(@"scrollViewWillEndDragging %f", scrollView.contentOffset.y);
 	CGPoint newOffset = *targetContentOffset;
 	CGFloat tableViewHeaderViewHeight = CGRectGetHeight(self.tableView.tableHeaderView.bounds);
 	CGFloat treshold = 5.0f;
 
 	//snap back if we didn't move above the treshold
-	if (self.previousContentOffset.y < treshold &&
+	if (self.previousTargetContentOffset.y < treshold &&
 		newOffset.y < treshold)
 	{
 		newOffset.y = 0.0f;
 	}
 	//snap to hide header view if we are in treshold range of table view content
-	else if (self.previousContentOffset.y == tableViewHeaderViewHeight &&
+	else if (self.previousTargetContentOffset.y == tableViewHeaderViewHeight &&
 			 newOffset.y > tableViewHeaderViewHeight - treshold &&
 			 newOffset.y < tableViewHeaderViewHeight)
 	{
 		newOffset.y = tableViewHeaderViewHeight;
 	}
 	//snap to header if we didn't show it
-	else if (self.previousContentOffset.y > 0 &&
-			 self.previousContentOffset.y <= tableViewHeaderViewHeight &&
+	else if (self.previousTargetContentOffset.y > 0 &&
+			 self.previousTargetContentOffset.y <= tableViewHeaderViewHeight &&
 			 newOffset.y < tableViewHeaderViewHeight)
 	{
 		newOffset.y = 0.0f;
 	}
 	//snap to table view content if we come from header
-	else if (self.previousContentOffset.y < tableViewHeaderViewHeight &&
+	else if (self.previousTargetContentOffset.y < tableViewHeaderViewHeight &&
 			 newOffset.y < tableViewHeaderViewHeight)
 	{
 		newOffset.y = tableViewHeaderViewHeight;
 	}
-	//we come from anywhere down at table and flip up -> snap to table view content
-	else if (self.previousContentOffset.y > tableViewHeaderViewHeight &&
-			 newOffset.y < tableViewHeaderViewHeight)
-	{
-		newOffset.y = tableViewHeaderViewHeight;
-	}
+
+//	//we come from anywhere down at table and flip up -> snap to table view content
+//	else if (self.targetContentOffset.y > tableViewHeaderViewHeight &&
+//			 newOffset.y < tableViewHeaderViewHeight)
+//	{
+//		newOffset.y = tableViewHeaderViewHeight;
+//	}
+
+	self.previousTargetContentOffset = newOffset;
 
 	*targetContentOffset = newOffset;
 }
