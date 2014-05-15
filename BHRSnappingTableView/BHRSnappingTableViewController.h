@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "BHRSnappingTableView.h"
 
-@interface BHRSnappingTableViewController : UIViewController
-
-@property (nonatomic, strong, readonly) BHRSnappingTableView *tableView;
+@interface BHRSnappingTableViewController : UITableViewController
 
 @end

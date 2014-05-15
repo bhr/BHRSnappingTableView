@@ -25,6 +25,7 @@
 {
     [super viewDidLoad];
 
+	self.edgesForExtendedLayout = UIRectEdgeNone;
 	self.itemsCount = kLowNumberOfItems;
 
 	[self _setUpTable];
@@ -85,7 +86,7 @@
 					  action:@selector(changeNumberOfItems:)
 			forControlEvents:UIControlEventTouchUpInside];
 
-				[_headerView addSubview:addButton];
+		[_headerView addSubview:addButton];
 		[_headerView addConstraint:[NSLayoutConstraint constraintWithItem:_headerView
 																attribute:NSLayoutAttributeCenterX
 																relatedBy:NSLayoutRelationEqual

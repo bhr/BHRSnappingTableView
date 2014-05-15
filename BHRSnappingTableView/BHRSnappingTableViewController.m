@@ -11,8 +11,7 @@
 
 @interface BHRSnappingTableViewController () <UIScrollViewDelegate, UITableViewDelegate>
 
-@property (nonatomic, strong) BHRSnappingTableView *tableView;
-
+@property (nonatomic, assign) BOOL resetContentOffset;
 @property (nonatomic, assign) CGPoint previousTargetContentOffset;
 
 @end
@@ -21,14 +20,45 @@
 
 #pragma mark - UIViewController overrides
 
+- (void) loadView
+{
+	BHRSnappingTableView* snappingTableView = [[BHRSnappingTableView alloc]initWithFrame:CGRectZero
+																				   style:UITableViewStylePlain];
+
+	snappingTableView.delegate = self;
+
+	self.view = snappingTableView;
+	self.tableView = snappingTableView;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+	[super viewWillAppear:animated];
+	self.resetContentOffset = YES;
+}
+
 - (void)viewDidLayoutSubviews
 {
 	[super viewDidLayoutSubviews];
 
-	CGPoint defaultContentOffset = CGPointMake(0.0f,
-											   CGRectGetHeight(self.tableView.tableHeaderView.bounds));
-	self.previousTargetContentOffset = defaultContentOffset;
-	[self.tableView setContentOffset:defaultContentOffset];
+	CGFloat tableViewHeaderHeight = CGRectGetHeight(self.tableView.tableHeaderView.bounds);
+	if (self.resetContentOffset &&
+		self.tableView.contentOffset.y < tableViewHeaderHeight)
+	{
+		CGPoint defaultContentOffset = CGPointMake(0.0f,
+												   tableViewHeaderHeight);
+		self.previousTargetContentOffset = defaultContentOffset;
+		[self.tableView setContentOffset:defaultContentOffset];
+		self.resetContentOffset = NO;
+	}
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+	[super willRotateToInterfaceOrientation:toInterfaceOrientation
+								   duration:duration];
+
+	self.resetContentOffset = YES;
 }
 
 #pragma mark - UIScrollViewDelegate
@@ -78,29 +108,6 @@
 	self.previousTargetContentOffset = newOffset;
 
 	*targetContentOffset = newOffset;
-}
-
-
-- (BHRSnappingTableView *)tableView
-{
-	if (!_tableView)
-	{
-		_tableView = [[BHRSnappingTableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
-		_tableView.translatesAutoresizingMaskIntoConstraints = NO;
-		_tableView.delegate = self;
-
-		[self.view addSubview:_tableView];
-		[self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_tableView]|"
-																		  options:0
-																		  metrics:nil
-																			views:NSDictionaryOfVariableBindings(_tableView)]];
-		[self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_tableView]|"
-																		  options:0
-																		  metrics:nil
-																			views:NSDictionaryOfVariableBindings(_tableView)]];
-	}
-
-	return _tableView;
 }
 
 @end
