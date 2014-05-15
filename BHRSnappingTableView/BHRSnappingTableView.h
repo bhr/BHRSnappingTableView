@@ -1,5 +1,5 @@
 //
-//  BHRViewController.h
+//  BHRSnappingTableView.h
 //  BHRSnappingTableView
 //
 //  Created by Benedikt Hirmer on 5/15/14.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BHRSnappingTableViewController.h"
 
-@interface BHRViewController : BHRSnappingTableViewController
+@interface BHRSnappingTableView : UITableView
 
 @end

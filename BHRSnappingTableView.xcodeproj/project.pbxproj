@@ -13,7 +13,6 @@
 		5FB886E61924D319007F6F31 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FB886E41924D319007F6F31 /* InfoPlist.strings */; };
 		5FB886E81924D319007F6F31 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB886E71924D319007F6F31 /* main.m */; };
 		5FB886EC1924D319007F6F31 /* BHRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB886EB1924D319007F6F31 /* BHRAppDelegate.m */; };
-		5FB886EF1924D319007F6F31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FB886ED1924D319007F6F31 /* Main.storyboard */; };
 		5FB886F21924D319007F6F31 /* BHRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB886F11924D319007F6F31 /* BHRViewController.m */; };
 		5FB886F41924D319007F6F31 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FB886F31924D319007F6F31 /* Images.xcassets */; };
 		5FB886FB1924D319007F6F31 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB886FA1924D319007F6F31 /* XCTest.framework */; };
@@ -21,6 +20,8 @@
 		5FB886FD1924D319007F6F31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB886DF1924D319007F6F31 /* UIKit.framework */; };
 		5FB887051924D319007F6F31 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FB887031924D319007F6F31 /* InfoPlist.strings */; };
 		5FB887071924D319007F6F31 /* BHRSnappingTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB887061924D319007F6F31 /* BHRSnappingTableViewTests.m */; };
+		5FB887121924D3E8007F6F31 /* BHRSnappingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB887111924D3E8007F6F31 /* BHRSnappingTableViewController.m */; };
+		5FB887151924D41B007F6F31 /* BHRSnappingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB887141924D41B007F6F31 /* BHRSnappingTableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +45,6 @@
 		5FB886E91924D319007F6F31 /* BHRSnappingTableView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BHRSnappingTableView-Prefix.pch"; sourceTree = "<group>"; };
 		5FB886EA1924D319007F6F31 /* BHRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BHRAppDelegate.h; sourceTree = "<group>"; };
 		5FB886EB1924D319007F6F31 /* BHRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHRAppDelegate.m; sourceTree = "<group>"; };
-		5FB886EE1924D319007F6F31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5FB886F01924D319007F6F31 /* BHRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BHRViewController.h; sourceTree = "<group>"; };
 		5FB886F11924D319007F6F31 /* BHRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHRViewController.m; sourceTree = "<group>"; };
 		5FB886F31924D319007F6F31 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -53,6 +53,10 @@
 		5FB887021924D319007F6F31 /* BHRSnappingTableViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BHRSnappingTableViewTests-Info.plist"; sourceTree = "<group>"; };
 		5FB887041924D319007F6F31 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5FB887061924D319007F6F31 /* BHRSnappingTableViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHRSnappingTableViewTests.m; sourceTree = "<group>"; };
+		5FB887101924D3E8007F6F31 /* BHRSnappingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHRSnappingTableViewController.h; sourceTree = "<group>"; };
+		5FB887111924D3E8007F6F31 /* BHRSnappingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHRSnappingTableViewController.m; sourceTree = "<group>"; };
+		5FB887131924D41B007F6F31 /* BHRSnappingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHRSnappingTableView.h; sourceTree = "<group>"; };
+		5FB887141924D41B007F6F31 /* BHRSnappingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHRSnappingTableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,9 +118,8 @@
 			children = (
 				5FB886EA1924D319007F6F31 /* BHRAppDelegate.h */,
 				5FB886EB1924D319007F6F31 /* BHRAppDelegate.m */,
-				5FB886ED1924D319007F6F31 /* Main.storyboard */,
-				5FB886F01924D319007F6F31 /* BHRViewController.h */,
-				5FB886F11924D319007F6F31 /* BHRViewController.m */,
+				5FB887171924D7ED007F6F31 /* Sample */,
+				5FB887161924D7DE007F6F31 /* Snapping View */,
 				5FB886F31924D319007F6F31 /* Images.xcassets */,
 				5FB886E21924D319007F6F31 /* Supporting Files */,
 			);
@@ -150,6 +153,26 @@
 				5FB887031924D319007F6F31 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5FB887161924D7DE007F6F31 /* Snapping View */ = {
+			isa = PBXGroup;
+			children = (
+				5FB887101924D3E8007F6F31 /* BHRSnappingTableViewController.h */,
+				5FB887111924D3E8007F6F31 /* BHRSnappingTableViewController.m */,
+				5FB887131924D41B007F6F31 /* BHRSnappingTableView.h */,
+				5FB887141924D41B007F6F31 /* BHRSnappingTableView.m */,
+			);
+			name = "Snapping View";
+			sourceTree = "<group>";
+		};
+		5FB887171924D7ED007F6F31 /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				5FB886F01924D319007F6F31 /* BHRViewController.h */,
+				5FB886F11924D319007F6F31 /* BHRViewController.m */,
+			);
+			name = Sample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +254,6 @@
 			files = (
 				5FB886F41924D319007F6F31 /* Images.xcassets in Resources */,
 				5FB886E61924D319007F6F31 /* InfoPlist.strings in Resources */,
-				5FB886EF1924D319007F6F31 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,9 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FB887121924D3E8007F6F31 /* BHRSnappingTableViewController.m in Sources */,
 				5FB886F21924D319007F6F31 /* BHRViewController.m in Sources */,
 				5FB886E81924D319007F6F31 /* main.m in Sources */,
 				5FB886EC1924D319007F6F31 /* BHRAppDelegate.m in Sources */,
+				5FB887151924D41B007F6F31 /* BHRSnappingTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,14 +305,6 @@
 				5FB886E51924D319007F6F31 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		5FB886ED1924D319007F6F31 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5FB886EE1924D319007F6F31 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		5FB887031924D319007F6F31 /* InfoPlist.strings */ = {
@@ -383,6 +399,7 @@
 				GCC_PREFIX_HEADER = "BHRSnappingTableView/BHRSnappingTableView-Prefix.pch";
 				INFOPLIST_FILE = "BHRSnappingTableView/BHRSnappingTableView-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -396,6 +413,7 @@
 				GCC_PREFIX_HEADER = "BHRSnappingTableView/BHRSnappingTableView-Prefix.pch";
 				INFOPLIST_FILE = "BHRSnappingTableView/BHRSnappingTableView-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

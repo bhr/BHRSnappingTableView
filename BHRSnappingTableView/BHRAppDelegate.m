@@ -7,12 +7,21 @@
 //
 
 #import "BHRAppDelegate.h"
+#import "BHRViewController.h"
 
 @implementation BHRAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
+	BHRViewController *viewController = [[BHRViewController alloc] init];
+	viewController.edgesForExtendedLayout = UIRectEdgeNone;
+	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+
+    self.window.rootViewController = navController;
+
+    [self.window makeKeyAndVisible];
     return YES;
 }
 							
