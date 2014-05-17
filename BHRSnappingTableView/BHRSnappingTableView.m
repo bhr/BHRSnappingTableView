@@ -16,7 +16,7 @@
 	CGFloat tableViewHeaderViewHeight = CGRectGetHeight(self.tableHeaderView.bounds);
 
 	CGFloat difference = (tableViewHeight - contentSize.height);
-	if (difference > 0)
+	if (difference > -tableViewHeaderViewHeight)
 	{
 		contentSize.height += difference + tableViewHeaderViewHeight;
 	}
