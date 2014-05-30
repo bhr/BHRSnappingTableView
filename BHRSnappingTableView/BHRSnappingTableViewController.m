@@ -11,7 +11,6 @@
 
 @interface BHRSnappingTableViewController () <UIScrollViewDelegate, UITableViewDelegate>
 
-@property (nonatomic, assign) BOOL resetContentOffset;
 @property (nonatomic, assign) CGPoint previousTargetContentOffset;
 
 @end

@@ -11,4 +11,6 @@
 
 @interface BHRSnappingTableViewController : UITableViewController
 
+@property (nonatomic, assign) BOOL resetContentOffset;
+
 @end
