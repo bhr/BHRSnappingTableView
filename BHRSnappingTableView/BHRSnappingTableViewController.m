@@ -12,6 +12,7 @@
 @interface BHRSnappingTableViewController () <UIScrollViewDelegate, UITableViewDelegate>
 
 @property (nonatomic, assign) CGPoint previousTargetContentOffset;
+@property (nonatomic, assign) BOOL alreadyAppeared;
 
 @end
 
@@ -33,6 +34,17 @@
 - (void)viewWillAppear:(BOOL)animated
 {
 	[super viewWillAppear:animated];
+
+	if (!self.alreadyAppeared)
+	{
+		self.alreadyAppeared = YES;
+		self.resetContentOffset = YES;
+	}
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+	[super viewDidDisappear:animated];
 	self.resetContentOffset = YES;
 }
 
@@ -47,7 +59,8 @@
 		CGPoint defaultContentOffset = CGPointMake(0.0f,
 												   tableViewHeaderHeight);
 		self.previousTargetContentOffset = defaultContentOffset;
-		[self.tableView setContentOffset:defaultContentOffset];
+		[self.tableView setContentOffset:defaultContentOffset
+								animated:NO];
 		self.resetContentOffset = NO;
 	}
 }
