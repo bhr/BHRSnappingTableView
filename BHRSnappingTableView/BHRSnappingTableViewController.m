@@ -52,6 +52,10 @@
 {
 	[super viewDidLayoutSubviews];
 
+	if (!self.tableView.tableHeaderView) {
+		return;
+	}
+
 	CGFloat tableViewHeaderHeight = CGRectGetHeight(self.tableView.tableHeaderView.bounds);
 	if (self.resetContentOffset &&
 		self.tableView.contentOffset.y < tableViewHeaderHeight)
@@ -79,6 +83,11 @@
 					 withVelocity:(CGPoint)velocity
 			  targetContentOffset:(inout CGPoint *)targetContentOffset
 {
+	if (!self.tableView.tableHeaderView)
+	{
+		return;
+	}
+
 	CGPoint newOffset = *targetContentOffset;
 	CGFloat tableViewHeaderViewHeight = CGRectGetHeight(self.tableView.tableHeaderView.bounds);
 	CGFloat treshold = 5.0f;
