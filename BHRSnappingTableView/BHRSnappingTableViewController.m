@@ -69,11 +69,9 @@
 	}
 }
 
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
 {
-	[super willRotateToInterfaceOrientation:toInterfaceOrientation
-								   duration:duration];
-
+	[super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
 	self.resetContentOffset = YES;
 }
 
